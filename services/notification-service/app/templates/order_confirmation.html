@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Order Confirmation</h1>
+    <p>Thank you for your order, <strong>#{{ order_number }}</strong></p>
+    
+    <h2>Items:</h2>
+    <ul>
+        {% for item in items %}
+        <li>Product ID: {{ item.product_id }} - Qty: {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Total: ${{ total }}</h3>
+</body>
+</html>
